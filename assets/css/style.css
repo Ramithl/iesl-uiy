@@ -85,6 +85,69 @@ To make it easy to update your theme, you should not edit the styles in this fil
 the custom.css file to add your styles. You can copy a style from this file and paste it in 
 custom.css and it will override the style in this file. You have been warned! :)
 */
+
+
+/* FAQ CSS */
+
+.panel-title > a:before {
+  float: right !important;
+  font-family: FontAwesome;
+  content:"\f068";
+  padding-right: 5px;
+}
+body{
+background-color:#f5f5f5;
+}
+.panel-title > a.collapsed:before {
+  float: right !important;
+  content:"\f067";
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+  text-decoration:none;
+}
+.panel-heading {
+  padding: 20px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.panel {
+  margin-bottom: 20px !important;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+  box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
+}
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #00bcd4;
+  text-align: center;
+  color: #fff;
+}
+
+
+/* GALLERY CSS */
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+
+
+/* Original Css*/
+
 body,
 html {
   overflow-x: hidden;
@@ -1134,7 +1197,7 @@ section {
 }
 /* Button Primary */
 .btn--primary {
-  background-color: #d8ae76;
+  background-color: #2f64a6;
   color: #ffffff;
 }
 .btn--primary:active,
@@ -1146,7 +1209,7 @@ section {
 .bg-dark .btn--primary:active,
 .bg-dark .btn--primary:focus,
 .bg-dark .btn--primary:hover {
-  background-color: #dbb683;
+  background-color: #2f64a6;
   color: #ffffff;
 }
 /* Button Secondary*/
@@ -1158,9 +1221,9 @@ section {
 .btn--secondary:active,
 .btn--secondary:focus,
 .btn--secondary:hover {
-  background-color: #d8ae76;
+  background-color: #2f64a6;
   color: #ffffff;
-  border-color: #d8ae76;
+  border-color: #2f64a6;
 }
 /* Button White */
 .btn--white {
@@ -1172,9 +1235,9 @@ section {
 .btn--white:active,
 .btn--white:focus,
 .btn--white:hover {
-  background-color: #d8ae76;
+  background-color: #2f64a6;
   color: #ffffff;
-  border-color: #d8ae76;
+  border-color: #2f64a6;
 }
 /* Button Block */
 .btn--block {
@@ -1192,26 +1255,26 @@ section {
   background-color: transparent;
 }
 .btn--bordered.btn--primary {
-  color: #d8ae76;
-  border-color: #d8ae76;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .btn--bordered.btn--primary:active,
 .btn--bordered.btn--primary:focus,
 .btn--bordered.btn--primary:hover {
-  color: #ffffff;
-  background-color: #d8ae76;
-  border-color: #d8ae76;
+  color: #2f64a6;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 .btn--bordered.btn--secondary {
-  color: #363636;
-  border-color: #363636;
+  color: #2f64a6;
+  border-color: #2f64a6;
 }
 .btn--bordered.btn--secondary:active,
 .btn--bordered.btn--secondary:focus,
 .btn--bordered.btn--secondary:hover {
   color: #ffffff;
-  background-color: #363636;
-  border-color: #363636;
+  background-color: #2f64a6;
+  border-color: #2f64a6;
 }
 .btn--bordered.btn--white {
   color: #ffffff;
@@ -1220,7 +1283,7 @@ section {
 .btn--bordered.btn--white:active,
 .btn--bordered.btn--white:focus,
 .btn--bordered.btn--white:hover {
-  color: #d8ae76;
+  color: #2f64a6;
   background-color: #ffffff;
   border-color: #ffffff;
 }
@@ -1233,8 +1296,8 @@ section {
 .btn--white.btn--secondary:focus,
 .btn--white.btn--secondary:hover {
   color: #ffffff;
-  background-color: #d8ae76;
-  border-color: #d8ae76;
+  background-color: #2f64a6;
+  border-color: #2f64a6;
 }
 .bg-theme .btn--primary,
 .bg-overlay-theme .btn--primary {
@@ -1434,7 +1497,7 @@ section {
 \*------------------------------------*/
 .heading .heading--title {
   font-family: 'Merriweather', serif;
-  color: #363636;
+  color: #ffffff;
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
@@ -1442,6 +1505,18 @@ section {
   text-transform: capitalize;
   padding-bottom: 0;
 }
+
+.heading .heading--title--gallery {
+  font-family: 'Merriweather', serif;
+  color: #2f64a6;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  padding-bottom: 0;
+}
+
 .heading .heading--divider {
   position: relative;
   margin-bottom: 43px;
@@ -1453,8 +1528,8 @@ section {
   left: 0;
   bottom: 0;
   width: 50px;
-  height: 1px;
-  background-color: #d8ae76;
+  height: 3px;
+  background-color: #207ffc;
 }
 .heading .heading--center:after {
   left: 50%;
@@ -2146,6 +2221,7 @@ section {
 \*------------------------------------*/
 .feature-panel {
   position: relative;
+  padding-bottom: 50px;
 }
 .feature-panel .feature--icon {
   color: #d8ae76;
@@ -2169,7 +2245,7 @@ section {
 }
 .feature-panel .feature--content h3 {
   font-family: 'Merriweather', serif;
-  color: #363636;
+  color: #1f1f1f;
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
@@ -2178,7 +2254,7 @@ section {
 }
 .feature-panel .feature--content p {
   opacity: 0.6;
-  color: #777777;
+  color: #242424;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -2239,6 +2315,7 @@ section {
   line-height: 30px;
   margin-bottom: 20px;
   font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
 }
 .about .signture {
   margin-top: 20px;
@@ -2977,7 +3054,7 @@ section {
 }
 .member .member-overlay .member-social {
   border-radius: 2px;
-  background-color: #d8ae76;
+  background-color: #2f64a6;
   opacity: 0.9;
   width: 100%;
   height: 100%;
@@ -3010,16 +3087,17 @@ section {
   color: #363636;
 }
 .member .member-info h5 {
-  color: #363636;
+  color: #ffffff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 10px;
+  margin-top: 50px;
   text-transform: capitalize;
 }
 .member .member-info h6 {
-  color: #999999;
+  color: #ffffff;
   font-family: 'Merriweather', serif;
   font-size: 14px;
   font-weight: 400;
